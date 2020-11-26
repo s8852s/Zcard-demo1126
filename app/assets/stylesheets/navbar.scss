@@ -1,0 +1,20 @@
+nav{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    
+    ul{
+        padding: 10px;
+        display: flex;
+
+        li{
+            padding: 0 10px;
+
+            a{
+                color: blueviolet;
+                text-decoration: none;
+            }
+        }
+    }
+}
