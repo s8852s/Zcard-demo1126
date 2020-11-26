@@ -8,6 +8,11 @@ class User < ApplicationRecord
 	validates :nickname, presence: true
 
 	before_create :encrypt_password
+
+	def self.login(u)
+		pw = Digest::SHA1.hexdigest("a#{u[:password]}z")
+		User.find_by(email: u[:email], password: pw)
+	end
 	
 	private
 	def encrypt_password
